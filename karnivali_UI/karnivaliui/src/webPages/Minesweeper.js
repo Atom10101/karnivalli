@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 import MinesweeperBody from './components/MinesweeperBody';
 import './components/Minesweeper.styles.css'
 import ScreenImg from  '../images/minesweeper_img.jpg';
+import { backgroundMinesweeper } from '../Components/Minesweeper.styles';
 
 /**
  * The goal of the game is to find all the mines on the board.
@@ -41,11 +42,11 @@ export default class Minesweeper extends React.Component {
     render() {
         const { height, width, mines } = this.state;
         return (
-            <div className="game">
+            <backgroundMinesweeper className="game">
 
                 <MinesweeperBody height={height} width={width} mines={mines} />
                 
-            </div>
+            </backgroundMinesweeper>
         );
     }
 }
